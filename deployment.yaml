@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: panda-deployment
+  labels:
+    app: panda
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: panda
+  template:
+    metadata:
+      labels:
+        app: panda
+    spec:
+      containers:
+      - name: panda-container
+        image: kundan547/panda
+        ports:
+        - containerPort: 80
+
