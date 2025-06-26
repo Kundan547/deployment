@@ -1,0 +1,13 @@
+replicaCount: 2
+
+image:
+  repository: kundan547/panda
+  pullPolicy: IfNotPresent
+  tag: latest
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30007
+
+containerPort: 80
